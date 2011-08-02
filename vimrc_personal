@@ -1,0 +1,31 @@
+"source /home/ha/linux/vim/gpg.vim
+ab kze Kedves Zoli és Edit!
+ab há Horváth Árpád
+ab ühá Üdvözlettel: Horváth Árpád
+ab üá Üdvözlettel: Árpi
+ab pyhton python
+ab Pyhton Python
+
+map <F9> :set list<CR>
+map <F10> :set nolist<CR>
+
+inoremap ,, <Esc>
+
+" Sorokat tör
+map <F8> :.,$w! /tmp/level<CR>:.,$d<CR>:r !fmt -s /tmp/level<CR>
+"az aktuális sortól.
+map <S-F8> 1G}j:.,$w! /tmp/level<CR>:.,$d<CR>:r !fmt -s /tmp/level<CR>
+"fejléces levelet (címsort nem)
+
+" A vim-latex-nél vigyázni kell F7-re
+" " Ékezettelenít
+" map <F7> :.,$w! /tmp/level<CR>:.,$d<CR>:r !ektelen /tmp/level<CR>
+" "az aktuális sortól.
+" map <S-F7> 1G}j:.,$w! /tmp/level<CR>:.,$d<CR>:r !ektelen /tmp/level<CR>
+" "fejléces levelet (címsort nem)
+
+
+" if !exists("autocommands_loaded")
+"   let autocommands_loaded = 1
+"   autocmd BufRead,BufNewFile,FileReadPost *.py source ~/.vim/python
+" endif
