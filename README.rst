@@ -28,6 +28,7 @@ Add some vim plugins into the .vim/bundle directory. For example
 vim-latex snipmate nerdtree pydoc
 
 Some links:
+
 * http://sontek.net/turning-vim-into-a-modern-python-ide
 * http://blog.dispatched.ch/2009/05/24/vim-as-python-ide/
 
