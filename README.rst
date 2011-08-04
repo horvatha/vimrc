@@ -27,6 +27,7 @@ Create the .vim/bundle directory::
 Add some vim plugins into the .vim/bundle directory. For example
 vim-latex snipmate nerdtree pydoc autoclose
 (in bundle)
+::
 
   git clone https://github.com/jcf/vim-latex vim-latex
   git clone http://github.com/tpope/vim-fugitive.git fugitive
