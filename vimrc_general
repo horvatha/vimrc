@@ -189,3 +189,7 @@ if version >= 700
 
     map <f12> <esc>:call ChangeSpellLang()<cr>
 endif
+
+" az autoclose-hoz kell
+imap OA <up>
+imap OB <down>
