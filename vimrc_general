@@ -193,3 +193,6 @@ endif
 " az autoclose-hoz kell
 imap OA <up>
 imap OB <down>
+
+" FuzzyFinder
+nmap <leader>ff :FufFile<cr>

@@ -9,7 +9,8 @@ ab Pyhton Python
 map <F9> :set list<CR>
 map <F10> :set nolist<CR>
 
-inoremap ,, <Esc>
+" Escape helyett jj 
+inoremap jj <Esc>
 
 " Sorokat tör
 map <F8> :.,$w! /tmp/level<CR>:.,$d<CR>:r !fmt -s /tmp/level<CR>
