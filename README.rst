@@ -19,10 +19,11 @@ Create a symbolic link to the vimrc file::
 
 Change the .vim/vimrc_personal for your needs.
 
-Create the .vim/bundle directory::
+Create the .vim/bundle directory and enter::
 
   cd ~/.vim
   mkdir bundle
+  cd bundle
 
 Add some vim plugins into the .vim/bundle directory. 
 (in bundle)
