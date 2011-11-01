@@ -55,6 +55,10 @@ Add some vim plugins into the .vim/bundle directory.
   git clone https://github.com/vim-scripts/TaskList.vim.git tasklist
   git clone https://github.com/sontek/rope-vim.git ropevim
 
+If you want the python scripts in .vim/vimrc_python work properly, you
+need to install vim-nox (if no x-server, just terminal), vim-gtk or
+vim-gnome.
+
 Some links:
 
 * http://sontek.net/turning-vim-into-a-modern-python-ide
