@@ -20,6 +20,8 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+set fileencodings=utf-8,latin2
+
 syntax on
 "set number
 set showcmd
