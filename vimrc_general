@@ -43,7 +43,7 @@ let g:mapleader=","
 autocmd BufEnter *.htm,*.html set smarttab sw=4
 autocmd BufEnter *.php set smartindent smarttab cinwords=if,while,function,class,else,elif,for,foreach sw=4 tw=0
 
-set hidden
+"set hidden
 "Allows hiding buffers even though they contain modifications
 "which have not yet been written back to the associated file. (sounds
 "quite technical, eh?)
