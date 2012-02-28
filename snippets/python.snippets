@@ -4,4 +4,38 @@ snippet pdb
 snippet ##
 	#!/usr/bin/env python
 	# coding: ${1:utf-8}
-	${2}
+
+	"""${2:Docstring of the module `Filename('$1', 'foo')`}
+	"""
+
+	${4}
+
+snippet ###
+	#!/usr/bin/env python${1}
+	# coding: ${2:utf-8}
+
+	"""${3:Docstring of the module `Filename('$1', 'foo')`}
+	"""
+
+	from __future__ import division
+	from __future__ import print_function
+
+	__author__ = '${4:`g:snips_author`}'
+	# wh for def cl defs ifmain imp fr _ pdb + <Tab>
+	${5}
+
+snippet for
+	for ${1:i} in ${2:range(10)}:
+		${3:pass}
+
+snippet cl
+	class ${1:ClassName}(${2:object}):
+		"""${3:docstring for $1}
+		"""
+		def __init__(self, ${4:arg}):
+			${5:super($1, self).__init__()}
+			self.$4 = $4
+			${6}
+
+snippet fr
+	from ${1:module} import ${2:*}

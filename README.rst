@@ -40,7 +40,7 @@ Add some vim plugins into the .vim/bundle directory.
   #TODO fuzzyfinder
 
 
-  # Unprobed from the first link below
+  # Unprobed. From the first url below.
   git clone http://github.com/tpope/vim-fugitive.git fugitive
   git clone https://github.com/tpope/vim-surround.git surround
   git clone https://github.com/tpope/vim-git.git git

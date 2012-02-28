@@ -5,6 +5,7 @@ ab ühá Üdvözlettel: Horváth Árpád
 ab üá Üdvözlettel: Árpi
 ab pyhton python
 ab Pyhton Python
+let g:snips_author='Arpad Horvath'
 
 map <F9> :set list<CR>
 map <F10> :set nolist<CR>
