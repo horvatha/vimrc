@@ -10,6 +10,21 @@ snippet ##
 
 	${4}
 
+snippet testfile
+	"""${1:Docstring}"""
+	import unittest
+	
+	class Test${2:Class}(unittest.TestCase):
+	    """${3:TestGroup}"""
+	
+	def setUp(self):
+	    """Setup Tests"""
+	    pass
+	
+	def tearDown(self):
+	    """Tear down each test"""
+	    pass
+
 snippet ###
 	#!/usr/bin/env python${1}
 	# coding: ${2:utf-8}
