@@ -1,0 +1,32 @@
+snippet ##
+	\documentclass[a4paper]{article}
+	
+	% iso-8859-2 azaz latin-2 kódolás esetén ez a rész kell:
+	%\usepackage{t1enc}
+	%\usepackage[latin2]{inputenc}
+	
+	% (utf-8-ra kódolhatjuk az iso-8859-est
+	% az enconv paranccsal [enca csomag])
+	% utf-8 kódolás esetén ez a rész kell:
+	
+	\usepackage{ucs}
+	\usepackage[T1]{fontenc}
+	\usepackage[utf8x]{inputenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%% A MAGYAR NYELVVEL kapcsolatos csomagok
+	\usepackage[magyar]{babel}
+	\usepackage{indentfirst}  % Az első bekezdést is behúzza.
+	
+	\frenchspacing   % A mondatvégek után azonos szóköz van, mint máshol
+	
+	\begin{document}
+	
+	\title{Linux alkalmazása}
+	\author{Horváth Árpád}
+	\maketitle
+	
+	\section{<++>}
+	
+	\end{document}
+
