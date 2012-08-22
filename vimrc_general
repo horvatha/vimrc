@@ -28,6 +28,9 @@ set showcmd
 "set hlsearch
 set mouse=a
 
+" http://www.thegeekstuff.com/2009/01/vi-and-vim-editor-5-awesome-examples-for-automatic-word-completion-using-ctrl-x-magic/
+set dictionary+=/usr/share/dict/british-english
+
 " Ezeket hátrébb rakja :n <Tab>-nál.
 set suffixes+=.pdf,.ps,.vrb,.png,.jpg,.nav,.snm,.rtf,.doc,.docx
 
@@ -100,7 +103,7 @@ au BufEnter *.tex let @r = "\\begin{frame}%<beamer>\n %[fragile]  % verb/verbati
 
 """""""""""""" Python """""""""""""""""
 " For python indent
-autocmd BufEnter *.py,*.pyw set smartindent smarttab cinwords=if,while,def,class,else,elif,except,finally,for,try,do,switch sw=4 tw=0
+autocmd BufEnter *.py,*.pyw,*.pyx set smartindent smarttab cinwords=if,while,def,class,else,elif,except,finally,for,try,do,switch sw=4 tw=0
 " For python folding
 au FileType python set foldmethod=indent
 au Syntax python set textwidth=0
