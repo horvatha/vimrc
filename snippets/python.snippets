@@ -25,19 +25,19 @@ snippet unittest
 	class Test${2:Class}(unittest.TestCase):
 	    """${3:TestGroup}"""
 	
-	def setUp(self):
-	    """Setup Tests"""
-	    pass
+		def setUp(self):
+			"""Setup Tests"""
+			pass
 	
-	def test_something(self):
-		"should return good values"
-		self.assertEqual(1, 1.0)
-		self.assertRaises(AssertionError, func, arg1, arg2)
-		self.assertTrue(1 == 1.0)
+		def test_something(self):
+			"should return good values"
+			self.assertEqual(1, 1.0)
+			self.assertRaises(AssertionError, func, arg1, arg2)
+			self.assertTrue(1 == 1.0)
 	
-	def tearDown(self):
-	    """Tear down each test"""
-	    pass
+		def tearDown(self):
+			"""Tear down each test"""
+			pass
 	
 	def suite():
 		${4:$2}_suite = unittest.makeSuite(Test${5:$2})

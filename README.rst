@@ -12,12 +12,16 @@ your home directory::
 
   git clone https://github.com/horvatha/vimrc ~/.vim
 
-Create a symbolic link to the vimrc file::
+Copy the vimrc file into the $HOME directory::
 
   cd
-  ln -s .vim/vimrc .vimrc
+  cp .vim/vimrc .vimrc
 
-Change the .vim/vimrc_personal for your needs.
+You should remove the second row from the .vimrc file not to use my
+.vim/vimrc_personal file or copy my vimrc_personal file to other name,
+change it for your needs, and fix the second row of .vimrc to load your
+own file.  Changing the vimrc_personal file itself makes harder to
+update with git.
 
 Create the .vim/bundle directory and enter::
 
@@ -29,15 +33,17 @@ Add some vim plugins into the .vim/bundle directory.
 (in bundle)
 ::
 
-  # I probed
-  git clone https://github.com/jcf/vim-latex vim-latex
+  # The most useful ones
   git clone https://github.com/msanders/snipmate.vim.git snipmate
   git clone https://github.com/ervandew/supertab.git supertab
+  git clone https://github.com/Townk/vim-autoclose autoclose
+
+  # I probed
+  git clone https://github.com/jcf/vim-latex vim-latex
   git clone https://github.com/vim-scripts/The-NERD-tree.git nerdtree
   git clone https://github.com/fs111/pydoc.vim.git pydoc
-  git clone https://github.com/Townk/vim-autoclose autoclose
   git clone https://github.com/vim-scripts/L9.git # kell a FuzzyFinderhez
-  #TODO fuzzyfinder
+  git clone https://github.com/vim-scripts/FuzzyFinder
 
 
   # Unprobed. From the first url below.
@@ -54,6 +60,7 @@ Add some vim plugins into the .vim/bundle directory.
   git clone https://github.com/reinh/vim-makegreen makegreen
   git clone https://github.com/vim-scripts/TaskList.vim.git tasklist
   git clone https://github.com/sontek/rope-vim.git ropevim
+
 
 If you want the python scripts in .vim/vimrc_python work properly, you
 need to install vim-nox (if no x-server, just terminal), vim-gtk or
