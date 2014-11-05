@@ -27,6 +27,7 @@ syntax on
 set showcmd
 "set hlsearch
 set mouse=a
+set history=200
 
 " http://www.thegeekstuff.com/2009/01/vi-and-vim-editor-5-awesome-examples-for-automatic-word-completion-using-ctrl-x-magic/
 set dictionary+=/usr/share/dict/british-english
@@ -35,7 +36,13 @@ set dictionary+=/usr/share/dict/british-english
 set suffixes+=.pdf,.ps,.vrb,.png,.jpg,.nav,.snm,.rtf,.doc,.docx
 
 " Ettől máshogy néz majd ki a syntaxiskiemelés/színek.
-colorscheme delek
+"colorscheme delek
+
+" Moving easier among windows
+map <c-j> <c-w>W
+map <c-k> <c-w>w
+"map <c-h> <c-w>h
+"map <c-l> <c-w>l
 
 " set leader to ,
 let mapleader=","
@@ -46,7 +53,7 @@ let g:mapleader=","
 autocmd BufEnter *.htm,*.html set smarttab sw=4
 autocmd BufEnter *.php set smartindent smarttab cinwords=if,while,function,class,else,elif,for,foreach sw=4 tw=0
 
-"set hidden
+set hidden
 "Allows hiding buffers even though they contain modifications
 "which have not yet been written back to the associated file. (sounds
 "quite technical, eh?)
@@ -90,6 +97,13 @@ filetype indent on
 
 " é miatt kell a ftplugin/tex.vim fájl.
 
+""""""""""""""""""""""" programming
+" For local replace
+nnoremap gR gd[{V%::s/<C-R>///gc<left><left><left>
+
+" For global replace
+nnoremap gr gD:%s/<C-R>///gc<left><left><left>
+
 """""""""""""""""""""" VIM-LaTeX end
 
 " registers for LaTeX
@@ -123,7 +137,7 @@ au Syntax python ab djcol   nev = models.CharField("ékezetes név", max_length=
 au FileType help map ú <C-]>
 au BufEnter *.txt set filetype=rst
 
-set expandtab
+autocmd filetype python set expandtab
 "set noexpandtab
 "When inserting text do or do not expand TABs to spaces. While I try
 "to avoid all control characters in text I can make good use of TABs

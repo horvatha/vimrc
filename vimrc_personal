@@ -11,7 +11,8 @@ map <F9> :set list<CR>
 map <F10> :set nolist<CR>
 
 " Escape helyett jj 
-inoremap jjj <Esc>
+" inoremap jjj <Esc>
+inoremap iii <Esc>
 
 " Sorokat tör
 map <F8> :.,$w! /tmp/level<CR>:.,$d<CR>:r !fmt -s /tmp/level<CR>
