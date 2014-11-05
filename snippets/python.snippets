@@ -22,36 +22,29 @@ snippet unittest
 	"""${1:Docstring}"""
 	import unittest
 	
+
 	class Test${2:Class}(unittest.TestCase):
 	    """${3:TestGroup}"""
 	
-		def setUp(self):
-			"""Setup Tests"""
-			pass
+	    def setUp(self):
+	        """Setup Tests"""
+	        self.known_values = (
+	            ("alma", 4),
+	            ([1, 2], 2),
+	        )
 	
-		def test_something(self):
-			"should return good values"
-			self.assertEqual(1, 1.0)
-			self.assertRaises(AssertionError, func, arg1, arg2)
-			self.assertTrue(1 == 1.0)
-	
-		def tearDown(self):
-			"""Tear down each test"""
-			pass
-	
-	def suite():
-		${4:$2}_suite = unittest.makeSuite(Test${5:$2})
-		return unittest.TestSuite([${6:$2}_suite])
-	
-	def test():
-		runner = unittest.TextTestRunner()
-		runner.run(suite())
+	    def test_something(self):
+	        "should return proper values"
+	        self.assertEqual(1, 1.0)
+	        with self.assertRaises(AssertionError):
+	            max(1, "a")
+	        self.assertTrue(1 == 1.0)
 	
 	if __name__ == "__main__":
-		test()
+	    unittest.main()
 
 snippet ###
-	#!/usr/bin/env python${1}
+	#!/usr/bin/env python${1:3}
 	# coding: ${2:utf-8}
 
 	"""${3:Docstring of the module `Filename('$1', 'foo')`}
