@@ -16,6 +16,11 @@
 " be lehet menni a könyvtárakba, bal nyilakkal szülőkönyvtárba nagyon
 " gyors navigálás.
 
+" PEP8 errors or warnings disabled in python-mode:
+" - E501 line too long (82 > 79 characters)
+" - E701 multiple statements on one line (colon)
+let g:pymode_lint_ignore="E501,E701"
+
 " For pathogen.vim: auto load all plugins in .vim/bundle
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
